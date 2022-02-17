@@ -1,5 +1,6 @@
 package com.example.firtcollection.lotto.domain;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -10,7 +11,7 @@ public class LottoNumber {
 
     public LottoNumber(List<Integer> numbers){
         validateDuplicate(numbers);
-        this.numbers = numbers;
+        this.numbers = Collections.unmodifiableList(numbers);
     }
 
     public List<Integer> getNumbers() {
