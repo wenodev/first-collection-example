@@ -17,8 +17,7 @@ public class Lotto {
     }
 
     public Lotto(List<Integer> numbers) {
-        LottoNumber lottoNumber = new LottoNumber(numbers);
-        this.lottoNumber = convertListToInteger(lottoNumber.getNumbers());
+        this.lottoNumber = convertListToInteger(numbers);
     }
 
     public Integer getLottoNumber() {
