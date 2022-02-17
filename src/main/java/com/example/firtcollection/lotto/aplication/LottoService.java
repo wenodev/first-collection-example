@@ -16,7 +16,7 @@ public class LottoService {
         this.lottoRepository = lottoRepository;
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public Lotto create(LottoRequest request) {
         Lotto lotto = LottoMapper.toEntity(request);
         return lottoRepository.save(lotto);

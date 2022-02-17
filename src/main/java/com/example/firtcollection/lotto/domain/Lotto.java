@@ -17,7 +17,12 @@ public class Lotto {
     }
 
     public Lotto(List<Integer> numbers) {
-        this.lottoNumber = convertListToInteger(numbers);
+        LottoNumber lottoNumber = new LottoNumber(numbers);
+        this.lottoNumber = convertListToInteger(lottoNumber.getNumbers());
+    }
+
+    public Integer getLottoNumber() {
+        return lottoNumber;
     }
 
     private Integer convertListToInteger(List<Integer> numbers) {
