@@ -1,0 +1,6 @@
+POST http://localhost:8080/lotto
+Content-Type: application/json
+
+{
+  "numbers": [1,2,3,4,4,6]
+}
